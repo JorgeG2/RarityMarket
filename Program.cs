@@ -1,10 +1,16 @@
+using Microsoft.EntityFrameworkCore;
 using RarityMarket.Components;
+using RarityMarket.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+// This line adds the AppDbContext to the service container and configures it to use SQL Server with the connection string from the configuration.
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RarityMarketDb")));
 
 var app = builder.Build();
 
