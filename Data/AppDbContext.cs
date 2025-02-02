@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using RarityMarket.Models;
 
-namespace RarityMarket.Models;
+namespace RarityMarket.Data;
 
 public partial class AppDbContext : DbContext
 {

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using RarityMarket.Components;
-using RarityMarket.Models;
+using RarityMarket.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
